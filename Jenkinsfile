@@ -1,20 +1,9 @@
 pipeline {
-  agent {
-    docker {
-      image 'maven:3-alpine'
-    }
-    
-  }
+  agent any
   stages {
-    stage('Example Build') {
-      steps {
-        sh 'mvn --version'
-        echo 'Hello, Maven'
-      }
-    }
     stage('Example Test') {
       steps {
-        echo 'Hello, JDK'
+        echo 'Hello World'
       }
     }
   }
